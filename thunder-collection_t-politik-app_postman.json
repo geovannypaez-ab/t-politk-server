@@ -1,0 +1,529 @@
+{
+    "info": {
+        "name": "t-politik-app",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "prueba",
+            "item": [
+                {
+                    "name": "welcome",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3001/",
+                            "path": [
+                                ""
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3001"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "admin",
+            "item": [
+                {
+                    "name": "profile",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/user?acepts=false",
+                            "query": [
+                                {
+                                    "key": "acepts",
+                                    "value": "false"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "v1",
+                                "user"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "auth",
+            "item": [
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/auth/login",
+                            "path": [
+                                "api",
+                                "v1",
+                                "auth",
+                                "login"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\":\"oscaring\",\n  \"password\":\"1098794707\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Lider",
+            "item": [
+                {
+                    "name": "create lider by admin",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/lider",
+                            "path": [
+                                "api",
+                                "v1",
+                                "lider"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "documento_li",
+                                    "value": "3453455754",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "nombre",
+                                    "value": "Jesus Prietooodw",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "apellido",
+                                    "value": "Rodriguezzd",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "jesswdqsqs@gmail.com",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "telefono",
+                                    "value": "23434838438",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "id_muni",
+                                    "value": "101",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "usuario",
+                                    "value": "wdwdscffgrawd",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "contrasena",
+                                    "value": "lider123grgd",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "estado",
+                                    "value": "1",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "fecha_naci",
+                                    "value": "2022-02-20",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "imagen",
+                                    "src": "d:\\usuario\\Pictures\\Todos-demo.png",
+                                    "disabled": true,
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "updated by admin",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/lider/1004923670",
+                            "path": [
+                                "api",
+                                "v1",
+                                "lider",
+                                "1004923670"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"monto\":1000000\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get liders by admin",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/lider?acepts=true",
+                            "query": [
+                                {
+                                    "key": "acepts",
+                                    "value": "true"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "v1",
+                                "lider"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "delete lider by admin",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/lider/1005029310",
+                            "path": [
+                                "api",
+                                "v1",
+                                "lider",
+                                "1005029310"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get personas",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/lider/80170180/personas",
+                            "path": [
+                                "api",
+                                "v1",
+                                "lider",
+                                "80170180",
+                                "personas"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "estadisticas",
+            "item": [
+                {
+                    "name": "getData",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/estadisticas",
+                            "path": [
+                                "api",
+                                "v1",
+                                "estadisticas"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Personas",
+            "item": [
+                {
+                    "name": "create by lider",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/persona",
+                            "path": [
+                                "api",
+                                "v1",
+                                "persona"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"documento_pe\":\"854455454\",\n  \"fecha_naci\":\"12-02-2003\",\n  \"nombre\":\"Geovannny \",\n  \"apellido\":\"paez\",\n  \"genero\":\"Masculino\",\n  \"id_bar\":\"128\",\n  \"telefono\":\"3122585458\",\n  \"email\":\"dww@gma.com\",\n  \"puesto_votacion\":\"dowmdowdwom\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "getPersonas",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/persona/lider?accepted=false",
+                            "query": [
+                                {
+                                    "key": "accepted",
+                                    "value": "false"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "v1",
+                                "persona",
+                                "lider"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "update person",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/persona/1035258687",
+                            "path": [
+                                "api",
+                                "v1",
+                                "persona",
+                                "1035258687"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"estado\":\"1\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "lugares",
+            "item": [
+                {
+                    "name": "get-lugares",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/lugar/admin",
+                            "path": [
+                                "api",
+                                "v1",
+                                "lugar",
+                                "admin"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get-lugares-lider",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{URL_API}}/api/v1/lugar/lider",
+                            "path": [
+                                "api",
+                                "v1",
+                                "lugar",
+                                "lider"
+                            ],
+                            "host": [
+                                "{{url_api}}"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{JWT}}",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

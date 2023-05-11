@@ -1,0 +1,394 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "t-politik-app",
+    "dateExported": "2023-04-27T17:54:42.167Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "aa8a4621-cce0-46eb-9d31-f5fe4dcef81f",
+            "name": "prueba",
+            "containerId": "",
+            "created": "2023-03-26T19:06:31.420Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "1223a3b2-8369-4571-872a-8b2da64bdd4b",
+            "name": "admin",
+            "containerId": "",
+            "created": "2023-03-27T12:59:58.354Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "d0c9a7df-62b0-49bc-b8bc-584ac4aa43e2",
+            "name": "auth",
+            "containerId": "",
+            "created": "2023-03-27T13:42:38.032Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "8e67c2c2-57f8-47df-815d-5ee759618696",
+            "name": "Lider",
+            "containerId": "",
+            "created": "2023-03-29T21:29:44.310Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "8eb34377-66b7-4879-a363-1a0d8ea722ea",
+            "name": "estadisticas",
+            "containerId": "",
+            "created": "2023-04-10T18:02:05.020Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "876839fd-9b93-4c95-a884-5c735158f8f5",
+            "name": "Personas",
+            "containerId": "",
+            "created": "2023-04-24T16:12:58.402Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "2c9d5f0d-b628-4749-938d-a1f597b96e70",
+            "name": "lugares",
+            "containerId": "",
+            "created": "2023-04-24T20:49:05.823Z",
+            "sortNum": 70000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "3e801606-f49b-4fa5-b44c-cfc8d3ca8e5a",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "aa8a4621-cce0-46eb-9d31-f5fe4dcef81f",
+            "name": "welcome",
+            "url": "http://localhost:3001/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-26T19:06:42.311Z",
+            "modified": "2023-04-27T17:49:56.957Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "957f322a-ba00-4de9-9470-095bff1c6a6d",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "2c9d5f0d-b628-4749-938d-a1f597b96e70",
+            "name": "get-lugares",
+            "url": "{{URL_API}}/api/v1/lugar/admin",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-30T19:27:34.995Z",
+            "modified": "2023-04-27T17:54:17.993Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0ff53e8d-0aea-4406-8e32-b13163f7f430",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "1223a3b2-8369-4571-872a-8b2da64bdd4b",
+            "name": "profile",
+            "url": "{{URL_API}}/api/v1/user?acepts=false",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-03-27T13:00:11.323Z",
+            "modified": "2023-04-27T17:51:16.199Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "acepts",
+                    "value": "false",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "5df3849d-8297-45b3-aff1-d22c74fa9f7f",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "d0c9a7df-62b0-49bc-b8bc-584ac4aa43e2",
+            "name": "login",
+            "url": "{{URL_API}}/api/v1/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-03-27T13:42:50.959Z",
+            "modified": "2023-04-27T17:51:38.390Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"oscaring\",\n  \"password\":\"1098794707\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ab39659d-2bfb-46a7-938f-884b136ce3cd",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "8e67c2c2-57f8-47df-815d-5ee759618696",
+            "name": "create lider by admin",
+            "url": "{{URL_API}}/api/v1/lider",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-03-29T21:29:51.958Z",
+            "modified": "2023-04-27T17:52:42.619Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "documento_li",
+                        "value": "3453455754"
+                    },
+                    {
+                        "name": "nombre",
+                        "value": "Jesus Prietooodw"
+                    },
+                    {
+                        "name": "apellido",
+                        "value": "Rodriguezzd"
+                    },
+                    {
+                        "name": "email",
+                        "value": "jesswdqsqs@gmail.com"
+                    },
+                    {
+                        "name": "telefono",
+                        "value": "23434838438"
+                    },
+                    {
+                        "name": "id_muni",
+                        "value": "101"
+                    },
+                    {
+                        "name": "usuario",
+                        "value": "wdwdscffgrawd"
+                    },
+                    {
+                        "name": "contrasena",
+                        "value": "lider123grgd"
+                    },
+                    {
+                        "name": "estado",
+                        "value": "1"
+                    },
+                    {
+                        "name": "fecha_naci",
+                        "value": "2022-02-20"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "imagen",
+                        "value": "d:\\usuario\\Pictures\\Todos-demo.png",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "bb12cc16-ef95-47ed-91a5-433c3ea08972",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "8e67c2c2-57f8-47df-815d-5ee759618696",
+            "name": "updated by admin",
+            "url": "{{URL_API}}/api/v1/lider/1004923670",
+            "method": "PATCH",
+            "sortNum": 70000,
+            "created": "2023-04-02T14:48:22.177Z",
+            "modified": "2023-04-27T17:52:55.513Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"monto\":1000000\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e1fae715-1c50-4363-9441-bad40abb6d9e",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "8e67c2c2-57f8-47df-815d-5ee759618696",
+            "name": "get liders by admin",
+            "url": "{{URL_API}}/api/v1/lider?acepts=true",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-03-27T16:36:26.335Z",
+            "modified": "2023-04-27T17:53:11.215Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "acepts",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "abc62f75-7b64-41ab-aad7-92e5abb5fb0b",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "8e67c2c2-57f8-47df-815d-5ee759618696",
+            "name": "delete lider by admin",
+            "url": "{{URL_API}}/api/v1/lider/1005029310",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-03-27T17:03:01.652Z",
+            "modified": "2023-04-27T17:53:19.505Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "fd0996c3-aae4-45ee-8702-5ec04ea64cf0",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "8e67c2c2-57f8-47df-815d-5ee759618696",
+            "name": "get personas",
+            "url": "{{URL_API}}/api/v1/lider/80170180/personas",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-04-03T14:36:51.304Z",
+            "modified": "2023-04-27T17:53:28.905Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c31e2d05-b8cb-4ecb-b66b-b837489f7ffb",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "8eb34377-66b7-4879-a363-1a0d8ea722ea",
+            "name": "getData",
+            "url": "{{URL_API}}/api/v1/estadisticas",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-04-10T18:02:14.286Z",
+            "modified": "2023-04-27T17:53:47.024Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "50ca534a-10e5-4d84-9d9e-f7d1e9dba948",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "876839fd-9b93-4c95-a884-5c735158f8f5",
+            "name": "create by lider",
+            "url": "{{URL_API}}/api/v1/persona",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-04-24T16:13:18.077Z",
+            "modified": "2023-04-27T17:53:55.779Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"documento_pe\":\"854455454\",\n  \"fecha_naci\":\"12-02-2003\",\n  \"nombre\":\"Geovannny \",\n  \"apellido\":\"paez\",\n  \"genero\":\"Masculino\",\n  \"id_bar\":\"128\",\n  \"telefono\":\"3122585458\",\n  \"email\":\"dww@gma.com\",\n  \"puesto_votacion\":\"dowmdowdwom\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "5c637b43-eea7-429f-a8f7-fb9c67b6b47b",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "2c9d5f0d-b628-4749-938d-a1f597b96e70",
+            "name": "get-lugares-lider",
+            "url": "{{URL_API}}/api/v1/lugar/lider",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2023-04-24T20:49:41.504Z",
+            "modified": "2023-04-27T17:54:30.799Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "55d642bb-f355-4032-816f-8d3ed87b8e08",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "876839fd-9b93-4c95-a884-5c735158f8f5",
+            "name": "getPersonas",
+            "url": "{{URL_API}}/api/v1/persona/lider?accepted=false",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-04-26T15:33:27.019Z",
+            "modified": "2023-04-27T17:54:03.790Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "accepted",
+                    "value": "false",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0cc9c09d-5cf0-4a3e-8574-380e7b51fc49",
+            "colId": "bce3d368-f954-469f-9b20-285ce6ac72ec",
+            "containerId": "876839fd-9b93-4c95-a884-5c735158f8f5",
+            "name": "update person",
+            "url": "{{URL_API}}/api/v1/persona/1035258687",
+            "method": "PATCH",
+            "sortNum": 150000,
+            "created": "2023-04-26T16:22:33.793Z",
+            "modified": "2023-04-27T17:54:09.313Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"estado\":\"1\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{JWT}}"
+            },
+            "tests": []
+        }
+    ]
+}

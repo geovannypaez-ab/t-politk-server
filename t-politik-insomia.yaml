@@ -1,0 +1,560 @@
+_type: export
+__export_format: 4
+__export_date: 2023-04-30T20:20:06.327Z
+__export_source: insomnia.desktop.app:v2023.2.0
+resources:
+  - _id: req_d2797ce48cf24e7b9279b12f115df423
+    parentId: fld_192c8a44021a4598a6a94017f7bb57c3
+    modified: 1682885090058
+    created: 1682885090058
+    url: http://localhost:3001/
+    name: welcome
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1682885090058
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_192c8a44021a4598a6a94017f7bb57c3
+    parentId: fld_445e4560883445d3ac11974657967ea9
+    modified: 1682885090064
+    created: 1682885090064
+    name: prueba
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1682885090064
+    _type: request_group
+  - _id: fld_445e4560883445d3ac11974657967ea9
+    parentId: wrk_31a5b857ba2d4c0db0bf6c54c08aeb96
+    modified: 1682885094623
+    created: 1682885094623
+    name: t-politik-app
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1682885094623
+    _type: request_group
+  - _id: wrk_31a5b857ba2d4c0db0bf6c54c08aeb96
+    parentId: null
+    modified: 1682885668697
+    created: 1682885108747
+    name: T-Politik-Api
+    description: wdad
+    scope: collection
+    _type: workspace
+  - _id: req_87a8480d3910419797ed2ad35d87daea
+    parentId: fld_5a03a39a60cf43a2a0afe0e840578341
+    modified: 1682885435300
+    created: 1682885090045
+    url: "{{URL_API}}/api/v1/user?acepts=false"
+    name: profile
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885090045
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5a03a39a60cf43a2a0afe0e840578341
+    parentId: fld_445e4560883445d3ac11974657967ea9
+    modified: 1682885090052
+    created: 1682885090052
+    name: admin
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1682885090052
+    _type: request_group
+  - _id: req_5c92635ab8c8483ca04b6861c3e12953
+    parentId: fld_8fcab3a522584c779c01f13e6c98dae0
+    modified: 1682885090031
+    created: 1682885090031
+    url: "{{URL_API}}/api/v1/auth/login"
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: ""
+      text: |-
+        {
+          "username":"oscaring",
+          "password":"1098794707"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1682885090031
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8fcab3a522584c779c01f13e6c98dae0
+    parentId: fld_445e4560883445d3ac11974657967ea9
+    modified: 1682885090039
+    created: 1682885090039
+    name: auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1682885090039
+    _type: request_group
+  - _id: req_35b5b69d84d547efb99353d3243f11d1
+    parentId: fld_a8ceeac308784b0489c370d7ff6a2d74
+    modified: 1682885208347
+    created: 1682885089889
+    url: "{{URL_API}}/api/v1/lider"
+    name: create lider by admin
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - type: default
+          name: documento_li
+          disabled: false
+          value: "3453455754"
+          id: pair_f3c8d60a5de54761a6ff7b3021bc2422
+        - type: default
+          name: nombre
+          disabled: false
+          value: Jesus Prietooodw
+          id: pair_85bafe13ae124036a9e9a3135634459f
+        - type: default
+          name: apellido
+          disabled: false
+          value: Rodriguezzd
+          id: pair_5c892604e1ac4f95ba62f7e5b51ad634
+        - type: default
+          name: email
+          disabled: false
+          value: jesswdqsqs@gmail.com
+          id: pair_7a73e21d32374ad4afe6578d825595d9
+        - type: default
+          name: telefono
+          disabled: false
+          value: "23434838438"
+          id: pair_d44ae1fb341b4bc89440650ee783425e
+        - type: default
+          name: id_muni
+          disabled: false
+          value: "101"
+          id: pair_5d37c4469413473bb8aaf823e8d57384
+        - type: default
+          name: usuario
+          disabled: false
+          value: wdwdscffgrawd
+          id: pair_c26470d8160c4db8b635f7d108113402
+        - type: default
+          name: contrasena
+          disabled: false
+          value: lider123grgd
+          id: pair_faa27e43aa6f4dc1b9c573ecbdc9207a
+        - type: default
+          name: estado
+          disabled: false
+          value: "1"
+          id: pair_cbb9afe3d20e44a281d8ba9f2b1ddae6
+        - type: default
+          name: fecha_naci
+          disabled: false
+          value: 2022-02-20
+          id: pair_cac5b8b34ece4d65926e1ed5263d148a
+        - type: file
+          name: imagen
+          disabled: true
+          fileName: d:\usuario\Pictures\Todos-demo.png
+          id: pair_3a00010f1f514021a6a2bb60addd5c13
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089889
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a8ceeac308784b0489c370d7ff6a2d74
+    parentId: fld_445e4560883445d3ac11974657967ea9
+    modified: 1682885090008
+    created: 1682885090008
+    name: Lider
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1682885090008
+    _type: request_group
+  - _id: req_5a2f299b4ed74bbbac3ff47efd536ce9
+    parentId: fld_a8ceeac308784b0489c370d7ff6a2d74
+    modified: 1682885212447
+    created: 1682885089857
+    url: "{{URL_API}}/api/v1/lider/1004923670"
+    name: updated by admin
+    description: ""
+    method: PATCH
+    body:
+      mimeType: ""
+      text: |-
+        {
+          "monto":1000000
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089857
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9217507d6fcd4d6ca6e5edc6fd3fe03a
+    parentId: fld_a8ceeac308784b0489c370d7ff6a2d74
+    modified: 1682885089836
+    created: 1682885089836
+    url: "{{URL_API}}/api/v1/lider?acepts=true"
+    name: get liders by admin
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089836
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_29713366a42f403bb07be8e6e5c4271f
+    parentId: fld_a8ceeac308784b0489c370d7ff6a2d74
+    modified: 1682885089809
+    created: 1682885089809
+    url: "{{URL_API}}/api/v1/lider/1005029310"
+    name: delete lider by admin
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089809
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_26727697cb6744a39751cec454d23082
+    parentId: fld_a8ceeac308784b0489c370d7ff6a2d74
+    modified: 1682885089804
+    created: 1682885089804
+    url: "{{URL_API}}/api/v1/lider/80170180/personas"
+    name: get personas
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089804
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6453f22ae1f04dc79ed46bdafb5cf7f8
+    parentId: fld_490f5e23f9c9437f925af75e82851045
+    modified: 1682885089789
+    created: 1682885089789
+    url: "{{URL_API}}/api/v1/estadisticas"
+    name: getData
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089789
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_490f5e23f9c9437f925af75e82851045
+    parentId: fld_445e4560883445d3ac11974657967ea9
+    modified: 1682885089795
+    created: 1682885089795
+    name: estadisticas
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1682885089795
+    _type: request_group
+  - _id: req_30081ffdbd2646c8bbfcf78c07120160
+    parentId: fld_f603a467a77b4a6b8b329bbb649b29a2
+    modified: 1682885089775
+    created: 1682885089775
+    url: "{{URL_API}}/api/v1/persona"
+    name: create by lider
+    description: ""
+    method: POST
+    body:
+      mimeType: ""
+      text: |-
+        {
+          "documento_pe":"854455454",
+          "fecha_naci":"12-02-2003",
+          "nombre":"Geovannny ",
+          "apellido":"paez",
+          "genero":"Masculino",
+          "id_bar":"128",
+          "telefono":"3122585458",
+          "email":"dww@gma.com",
+          "puesto_votacion":"dowmdowdwom"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089775
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f603a467a77b4a6b8b329bbb649b29a2
+    parentId: fld_445e4560883445d3ac11974657967ea9
+    modified: 1682885089781
+    created: 1682885089781
+    name: Personas
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1682885089781
+    _type: request_group
+  - _id: req_b87fd9c1613a47988fcb601fb837442b
+    parentId: fld_f603a467a77b4a6b8b329bbb649b29a2
+    modified: 1682885089764
+    created: 1682885089764
+    url: "{{URL_API}}/api/v1/persona/lider?accepted=false"
+    name: getPersonas
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089764
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_64d559e2b1be4db6a16f71b1efe86193
+    parentId: fld_f603a467a77b4a6b8b329bbb649b29a2
+    modified: 1682885089751
+    created: 1682885089751
+    url: "{{URL_API}}/api/v1/persona/1035258687"
+    name: update person
+    description: ""
+    method: PATCH
+    body:
+      mimeType: ""
+      text: |-
+        {
+          "estado":"1"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089751
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_797c0dcfa9ce4d819d92d2b355423fa1
+    parentId: fld_412817671b9f4f7f9207e2ef9b1e879b
+    modified: 1682885089733
+    created: 1682885089733
+    url: "{{URL_API}}/api/v1/lugar/admin"
+    name: get-lugares
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089733
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_412817671b9f4f7f9207e2ef9b1e879b
+    parentId: fld_445e4560883445d3ac11974657967ea9
+    modified: 1682885089741
+    created: 1682885089741
+    name: lugares
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1682885089741
+    _type: request_group
+  - _id: req_15f5c95fe5b5421989857a13f49a08e4
+    parentId: fld_412817671b9f4f7f9207e2ef9b1e879b
+    modified: 1682885089713
+    created: 1682885089713
+    url: "{{URL_API}}/api/v1/lugar/lider"
+    name: get-lugares-lider
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      disabled: false
+      token: "{{JWT}}"
+      prefix: ""
+    metaSortKey: -1682885089713
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_c1460f7e0aa4e2fd977c38cbbbb5496bee3c9fae
+    parentId: wrk_31a5b857ba2d4c0db0bf6c54c08aeb96
+    modified: 1682885197507
+    created: 1682885116273
+    name: Base Environment
+    data:
+      JWT: ""
+      URL_API: http://localhost:3001
+    dataPropertyOrder:
+      "&":
+        - JWT
+        - URL_API
+    color: null
+    isPrivate: false
+    metaSortKey: 1682885116273
+    _type: environment
+  - _id: jar_c1460f7e0aa4e2fd977c38cbbbb5496bee3c9fae
+    parentId: wrk_31a5b857ba2d4c0db0bf6c54c08aeb96
+    modified: 1682885116280
+    created: 1682885116280
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_a9b237a5c90243cc8c626dabea55388d
+    parentId: wrk_31a5b857ba2d4c0db0bf6c54c08aeb96
+    modified: 1682885108751
+    created: 1682885108751
+    fileName: My Collection
+    contents: ""
+    contentType: yaml
+    _type: api_spec
